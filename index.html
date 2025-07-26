@@ -10,37 +10,44 @@
       margin: 0;
       font-family: sans-serif;
       background: url("images/bg.png") center/cover no-repeat fixed;
-      color: #f0f0f0;
-    }
-    header {
-      padding: 2rem 1rem 1rem;
-      text-align: center;
-    }
-    header h1 {
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
       color: #fff;
     }
-    header p {
-      font-size: 1.1rem;
-      margin: 0 0 1rem;
-      color: #ddd;
+    header {
+      padding: 1rem;
+      text-align: center;
     }
-    .buttons {
+    .contact {
+      font-size: 1.2rem;
+    }
+    .hero {
+      text-align: center;
+      padding: 2rem 1rem 1rem;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+    .hero p {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+    }
+    .hero-buttons {
       display: flex;
       justify-content: center;
       gap: 1rem;
       flex-wrap: wrap;
+      margin-bottom: 1rem;
     }
-    .buttons a {
+    .hero-buttons a {
       display: inline-block;
-      padding: 0.6rem 1rem;
+      padding: 0.6rem 1.2rem;
       border-radius: 8px;
       text-decoration: none;
-      color: #fff;
       font-weight: bold;
+      color: #fff;
     }
-    .call { background: #333; }
+    .call { background: #1e1e1e; }
     .whatsapp { background: #25d366; }
     .telegram { background: #0088cc; }
 
@@ -49,14 +56,14 @@
       margin: 1rem auto;
       padding: 1.5rem;
       border-radius: 12px;
-      background: rgba(30, 30, 30, 0.7);
-      box-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
+      background: rgba(0, 0, 0, 0.5);
     }
     .section h2 {
       margin-bottom: 0.5rem;
+      color: #fff;
     }
     .divider {
-      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.3);
       margin-bottom: 1rem;
     }
     .cards {
@@ -66,10 +73,10 @@
     }
     .card {
       flex: 1 1 calc(33% - 1rem);
-      background: rgba(255, 255, 255, 0.08);
+      background: #fff;
+      color: #111;
       padding: 1rem;
       border-radius: 10px;
-      color: #fff;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
       transition: transform 0.2s ease;
     }
@@ -100,14 +107,20 @@
 </head>
 <body>
   <header>
-    <h1>Эвакуатор в Краснодаре</h1>
-    <p>Работаем 24/7. Надёжно. Без посредников.</p>
-    <div class="buttons">
-      <a class="call" href="tel:+79180713711"><i class="fas fa-phone"></i> Позвонить</a>
-      <a class="whatsapp" href="https://wa.me/79180713711"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-      <a class="telegram" href="https://t.me/+79180713711"><i class="fab fa-telegram-plane"></i> Telegram</a>
+    <div class="contact">
+      📞 <a href="tel:+79180713711" style="color: #f0f0f0; text-decoration: none">+7 918 071-37-11</a>
     </div>
   </header>
+
+  <div class="hero">
+    <h1>Эвакуатор в Краснодаре</h1>
+    <p>Работаем 24/7. Надёжно. Без посредников.</p>
+    <div class="hero-buttons">
+      <a href="tel:+79180713711" class="call"><i class="fas fa-phone"></i> Позвонить</a>
+      <a href="https://wa.me/79180713711" class="whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+      <a href="https://t.me/username" class="telegram"><i class="fab fa-telegram-plane"></i> Telegram</a>
+    </div>
+  </div>
 
   <section class="section">
     <h2>Наши услуги</h2>
