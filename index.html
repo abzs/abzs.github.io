@@ -1,25 +1,19 @@
-# Создадим HTML-файл с фоном и двумя боковыми следами
-html_code = """
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Эвакуатор Краснодар</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Эвакуатор Краснодар 24/7</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
-    body {
-      font-family: sans-serif;
-      color: #fff;
+    html, body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, sans-serif;
       background: url('images/bg.png') center center / cover no-repeat fixed;
-      min-height: 100vh;
+      color: #111;
       position: relative;
-      padding: 2rem;
     }
 
     .tire-track {
@@ -29,7 +23,7 @@ html_code = """
       width: auto;
       z-index: 0;
       pointer-events: none;
-      opacity: 0.12;
+      opacity: 0.1;
     }
 
     .tire-track.left {
@@ -41,47 +35,124 @@ html_code = """
       transform: scaleX(-1);
     }
 
-    .content {
-      position: relative;
-      z-index: 1;
-      max-width: 800px;
-      margin: 0 auto;
-      background: rgba(0, 0, 0, 0.6);
-      padding: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeIn 0.8s ease-out forwards;
     }
 
-    h1 {
+    @keyframes fadeIn {
+      to { opacity: 1; transform: none; }
+    }
+
+    header {
+      color: white;
+      text-shadow: 1px 1px 5px black;
+      padding: 3rem 1rem;
+      text-align: center;
+    }
+
+    header h1 {
       font-size: 2.5rem;
-      margin-bottom: 1rem;
+      margin: 0 0 1rem;
     }
 
-    p {
-      margin-bottom: 0.5rem;
-      line-height: 1.5;
+    header p {
+      font-size: 1.2rem;
     }
 
-    .contact {
-      margin-top: 2rem;
+    .buttons {
+      margin: 2rem auto;
+      text-align: center;
+      z-index: 1;
+      position: relative;
     }
 
-    .contact a {
+    .buttons a {
       display: inline-block;
-      margin-right: 1rem;
-      padding: 0.5rem 1rem;
-      border-radius: 8px;
-      background-color: #ffd700;
-      color: #000;
+      margin: 0.5rem;
+      padding: 0.8rem 1.5rem;
       text-decoration: none;
       font-weight: bold;
+      color: white;
+      border-radius: 8px;
+      transition: 0.2s;
+    }
+
+    .call { background: #333; }
+    .whatsapp { background: #25D366; }
+    .telegram { background: #0088cc; }
+
+    .buttons a:hover {
+      opacity: 0.85;
+    }
+
+    .phone-number {
+      margin-top: 1.2rem;
+      font-size: 1.2rem;
+      color: #fff;
+    }
+
+    section {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem 1rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    h2 {
+      margin-top: 0;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 0.5rem;
+      color: #222;
+    }
+
+    .services, .prices {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1rem;
+    }
+
+    .card {
+      background: #ffffffcc;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.07);
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+    }
+
+    .card h3 {
+      margin: 0 0 0.5rem;
+    }
+
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: none;
+      border-radius: 8px;
+    }
+
+    footer {
+      background: #f1f1f1cc;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #555;
+      position: relative;
+      z-index: 1;
     }
 
     @media (max-width: 600px) {
-      h1 { font-size: 2rem; }
-      .contact a {
+      header h1 { font-size: 1.8rem; }
+      .buttons a {
         display: block;
-        margin-bottom: 1rem;
+        margin: 0.7rem auto;
+        width: 90%;
       }
     }
   </style>
@@ -89,23 +160,65 @@ html_code = """
 <body>
   <img src="images/tire-track.png" class="tire-track left" alt="">
   <img src="images/tire-track.png" class="tire-track right" alt="">
-  <div class="content">
-    <h1>Эвакуатор Краснодар</h1>
-    <p>Иванов Иван Петрович</p>
-    <p>Работаем по Краснодару и краю</p>
-    <p>Цены от 1000 ₽</p>
-    <div class="contact">
-      <a href="tel:+79180713711">Позвонить</a>
-      <a href="https://wa.me/79180713711">WhatsApp</a>
-      <a href="https://t.me/+79180713711">Telegram</a>
-    </div>
-    <p style="margin-top:1rem;">Телефон: +7 918 071-37-11</p>
+  <header>
+    <h1 class="fade-in">Эвакуатор в Краснодаре</h1>
+    <p>Работаем 24/7. Надёжно. Без посредников.</p>
+  </header>
+
+  <div class="buttons">
+    <a class="call" href="tel:+79180713711">📞 Позвонить</a>
+    <a class="whatsapp" href="https://wa.me/79180713711?text=Здравствуйте!%20Нужен%20эвакуатор" target="_blank">💬 WhatsApp</a>
+    <a class="telegram" href="https://t.me/+79180713711" target="_blank">✈️ Telegram</a>
+    <p class="phone-number">📱 <strong>+7 918 071‑37‑11</strong></p>
   </div>
+
+  <section>
+    <h2>Наши услуги</h2>
+    <div class="services">
+      <div class="card">
+        <h3>🚗 Легковые и внедорожники</h3>
+        <p>Эвакуация любых легковых автомобилей и кроссоверов</p>
+      </div>
+      <div class="card">
+        <h3>🛠️ После ДТП</h3>
+        <p>Вывоз авто после аварии, бережная загрузка и сопровождение</p>
+      </div>
+      <div class="card">
+        <h3>🌄 За город</h3>
+        <p>Работаем по всему Краснодарскому краю, быстро доедем</p>
+      </div>
+      <div class="card">
+        <h3>🔧 Не заводится</h3>
+        <p>Застряли на трассе? Приезжаем даже ночью, без выходных</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Цены</h2>
+    <div class="prices">
+      <div class="card">
+        <h3>📍 По городу</h3>
+        <p>От 1500 ₽. Без скрытых платежей.</p>
+      </div>
+      <div class="card">
+        <h3>🛣️ За город</h3>
+        <p>От 50 ₽/км. Расчёт сразу по телефону.</p>
+      </div>
+      <div class="card">
+        <h3>🕐 Ожидание</h3>
+        <p>10 мин — бесплатно, далее от 300 ₽/час</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Работаем по Краснодару</h2>
+    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A28f2787d29cf3a0f8e3f5be36de3a7b26e77a4d00d1a4cf24c45ff490c8a0c6f&amp;source=constructor"></iframe>
+  </section>
+
+  <footer>
+    © 2025 ИП Иванов Иван Петрович | +7 918 071‑37‑11 | Краснодар | Работаем 24/7
+  </footer>
 </body>
 </html>
-"""
-
-with open("/mnt/data/index.html", "w", encoding="utf-8") as f:
-    f.write(html_code)
-
-"/mnt/data/index.html"
