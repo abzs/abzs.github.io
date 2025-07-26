@@ -2,213 +2,163 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Эвакуатор Краснодар 24/7</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Эвакуатор Краснодар</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-papmQeKMvuUNf1d5N8UfR0GuqWlRZzWQh44z42Y7JswznUpn4r7hK+3+CHrJmSGeU9NmrMZ+7oMgFVmO+v8cug==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    html, body {
+    body {
       margin: 0;
-      font-family: "Segoe UI", Tahoma, sans-serif;
-      background: url('images/bg.png') center top / cover no-repeat fixed;
-      color: #111;
+      font-family: sans-serif;
+      background: url("images/bg.png") center/cover no-repeat fixed;
+      color: #f0f0f0;
     }
-
-    .fade-in {
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeIn 0.8s ease-out forwards;
-    }
-
-    @keyframes fadeIn {
-      to {
-        opacity: 1;
-        transform: none;
-      }
-    }
-
     header {
-      color: white;
-      text-shadow: 1px 1px 5px black;
-      padding: 3rem 1rem;
+      padding: 2rem 1rem 1rem;
       text-align: center;
-      background: rgba(0, 0, 0, 0.5);
     }
-
     header h1 {
-      font-size: 2.5rem;
-      margin: 0 0 1rem;
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      color: #fff;
     }
-
     header p {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
+      margin: 0 0 1rem;
+      color: #ddd;
     }
-
     .buttons {
-      margin: 2rem auto;
-      text-align: center;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
     }
-
     .buttons a {
       display: inline-block;
-      margin: 0.5rem;
-      padding: 0.8rem 1.5rem;
+      padding: 0.6rem 1rem;
+      border-radius: 8px;
       text-decoration: none;
+      color: #fff;
       font-weight: bold;
-      color: white;
-      border-radius: 8px;
-      transition: 0.2s;
     }
+    .call { background: #333; }
+    .whatsapp { background: #25d366; }
+    .telegram { background: #0088cc; }
 
-    .call {
-      background: #333;
-    }
-
-    .whatsapp {
-      background: #25D366;
-    }
-
-    .telegram {
-      background: #0088cc;
-    }
-
-    .buttons a:hover {
-      opacity: 0.85;
-    }
-
-    .phone-number {
-      margin-top: 1.2rem;
-      font-size: 1.2rem;
-      color: #333;
-    }
-
-    section {
+    .section {
       max-width: 900px;
-      margin: auto;
-      padding: 2rem 1rem;
-      background: rgba(255, 255, 255, 0.8);
-      border-radius: 8px;
+      margin: 1rem auto;
+      padding: 1.5rem;
+      border-radius: 12px;
+      background: rgba(30, 30, 30, 0.7);
+      box-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
     }
-
-    h2 {
-      margin-top: 0;
-      border-bottom: 2px solid #eee;
-      padding-bottom: 0.5rem;
-      color: #222;
+    .section h2 {
+      margin-bottom: 0.5rem;
     }
-
-    .services, .prices {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    .divider {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      margin-bottom: 1rem;
+    }
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
       gap: 1rem;
     }
-
     .card {
-      background: #ffffff;
+      flex: 1 1 calc(33% - 1rem);
+      background: rgba(255, 255, 255, 0.08);
       padding: 1rem;
-      border-radius: 8px;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.07);
-      transition: transform 0.2s;
+      border-radius: 10px;
+      color: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+      transition: transform 0.2s ease;
     }
-
     .card:hover {
-      transform: translateY(-3px);
+      transform: translateY(-2px);
     }
-
-    .card h3 {
-      margin: 0 0 0.5rem;
+    .card i {
+      margin-right: 0.5rem;
     }
-
     iframe {
       width: 100%;
       height: 300px;
       border: none;
-      border-radius: 8px;
+      border-radius: 10px;
     }
-
     footer {
-      background: #f1f1f1;
       text-align: center;
-      padding: 1rem;
       font-size: 0.9rem;
-      color: #555;
+      color: #aaa;
+      padding: 1rem;
     }
-
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 1.8rem;
-      }
-
-      .buttons a {
-        display: block;
-        margin: 0.7rem auto;
-        width: 90%;
+    @media (max-width: 768px) {
+      .card {
+        flex: 1 1 100%;
       }
     }
   </style>
 </head>
 <body>
   <header>
-    <h1 class="fade-in">Эвакуатор в Краснодаре</h1>
+    <h1>Эвакуатор в Краснодаре</h1>
     <p>Работаем 24/7. Надёжно. Без посредников.</p>
+    <div class="buttons">
+      <a class="call" href="tel:+79180713711"><i class="fas fa-phone"></i> Позвонить</a>
+      <a class="whatsapp" href="https://wa.me/79180713711"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+      <a class="telegram" href="https://t.me/+79180713711"><i class="fab fa-telegram-plane"></i> Telegram</a>
+    </div>
   </header>
 
-  <div class="buttons">
-    <a class="call" href="tel:+79180713711">📞 Позвонить</a>
-    <a class="whatsapp" href="https://wa.me/79180713711?text=Здравствуйте!%20Нужен%20эвакуатор" target="_blank">💬 WhatsApp</a>
-    <a class="telegram" href="https://t.me/+79180713711" target="_blank">✈️ Telegram</a>
-    <p class="phone-number">📱 <strong>+7 918 071‑37‑11</strong></p>
-  </div>
-
-  <section>
+  <section class="section">
     <h2>Наши услуги</h2>
-    <div class="services">
+    <div class="divider"></div>
+    <div class="cards">
       <div class="card">
-        <h3>🚗 Легковые и внедорожники</h3>
+        <i class="fas fa-car"></i><strong> Легковые и внедорожники</strong>
         <p>Эвакуация любых легковых автомобилей и кроссоверов</p>
       </div>
       <div class="card">
-        <h3>🛠️ После ДТП</h3>
+        <i class="fas fa-car-crash"></i><strong> После ДТП</strong>
         <p>Вывоз авто после аварии, бережная загрузка и сопровождение</p>
       </div>
       <div class="card">
-        <h3>🌄 За город</h3>
+        <i class="fas fa-map-marker-alt"></i><strong> За город</strong>
         <p>Работаем по всему Краснодарскому краю, быстро доедем</p>
       </div>
       <div class="card">
-        <h3>🔧 Не заводится</h3>
+        <i class="fas fa-wrench"></i><strong> Не заводится</strong>
         <p>Застряли на трассе? Приезжаем даже ночью, без выходных</p>
       </div>
     </div>
   </section>
 
-  <section>
+  <section class="section">
     <h2>Цены</h2>
-    <div class="prices">
+    <div class="divider"></div>
+    <div class="cards">
       <div class="card">
-        <h3>📍 По городу</h3>
-        <p>От 1500 ₽. Без скрытых платежей.</p>
+        <i class="fas fa-key"></i><strong> По городу</strong>
+        <p>От 1500 Р. Без скрытых платежей.</p>
       </div>
       <div class="card">
-        <h3>🛣️ За город</h3>
-        <p>От 50 ₽/км. Расчёт сразу по телефону.</p>
+        <i class="fas fa-flag"></i><strong> За город</strong>
+        <p>От 50 Р/км. Расчёт сразу по телефону.</p>
       </div>
       <div class="card">
-        <h3>🕐 Ожидание</h3>
-        <p>10 мин — бесплатно, далее от 300 ₽/час</p>
+        <i class="fas fa-clock"></i><strong> Ожидание</strong>
+        <p>10 мин — бесплатно, далее от 300 Р/час</p>
       </div>
     </div>
   </section>
 
-  <section>
+  <section class="section">
     <h2>Работаем по Краснодару</h2>
-    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A28f2787d29cf3a0f8e3f5be36de3a7b26e77a4d00d1a4cf24c45ff490c8a0c6f&amp;source=constructor"></iframe>
+    <div class="divider"></div>
+    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A2f21c81b0109a3b1639944738e8a76f334e21c9e6825f41011fc2b761e589db5&amp;source=constructor" allowfullscreen></iframe>
   </section>
 
   <footer>
-    © 2025 ИП Иванов Иван Петрович | +7 918 071‑37‑11 | Краснодар | Работаем 24/7
+    © 2025 ИП Иванов Иван Петрович | +7 918 071-37-11 | Краснодар | Работаем 24/7
   </footer>
 </body>
 </html>
