@@ -2,106 +2,173 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Эвакуатор Краснодар</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Эвакуатор Краснодар 24/7</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet"/>
   <style>
-    body {
+    * {
+      box-sizing: border-box;
       margin: 0;
-      font-family: 'Montserrat', sans-serif;
-      color: #fff;
-      background: url('images/bg.png') no-repeat center center fixed;
-      background-size: cover;
+      padding: 0;
     }
 
-    header, section, footer {
-      max-width: 1000px;
-      margin: auto;
-      padding: 1.5rem;
-      background-color: rgba(0, 0, 0, 0.6);
-      border-radius: 12px;
-      margin-top: 2rem;
+    body {
+      font-family: 'Montserrat', sans-serif;
+      color: #fff;
+      background: url('images/bg.png') center center / cover no-repeat fixed;
     }
 
     header {
       text-align: center;
+      padding: 4rem 1rem;
+      background: rgba(0,0,0,0.5);
     }
 
-    h1 {
-      margin: 0;
-      font-size: 2.2rem;
+    header h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
     }
 
-    p {
-      margin: 0.5rem 0;
+    header p {
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
     }
 
-    .contacts {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      margin-top: 1rem;
-      flex-wrap: wrap;
+    .buttons {
+      text-align: center;
+      margin: 2rem 0;
     }
 
-    .contacts a {
-      color: #ffd700;
+    .buttons a {
+      display: inline-block;
+      margin: 0.5rem;
+      padding: 0.8rem 1.5rem;
       text-decoration: none;
       font-weight: bold;
+      color: white;
+      border-radius: 6px;
+      transition: 0.2s;
     }
 
-    .price-cards {
-      display: flex;
+    .call { background: #333; }
+    .whatsapp { background: #25D366; }
+    .telegram { background: #0088cc; }
+
+    .buttons a:hover {
+      opacity: 0.85;
+    }
+
+    .phone-number {
+      margin-top: 1rem;
+      font-size: 1.2rem;
+    }
+
+    section {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem 1rem;
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 8px;
+      margin-bottom: 2rem;
+    }
+
+    h2 {
+      font-weight: 600;
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+    }
+
+    .services, .prices {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       gap: 1rem;
-      flex-wrap: wrap;
     }
 
     .card {
-      flex: 1 1 280px;
-      background-color: #eee;
-      color: #000;
+      background: rgba(255,255,255,0.1);
       padding: 1rem;
-      border-radius: 10px;
+      border-radius: 6px;
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
     }
 
     .card h3 {
-      margin-top: 0;
+      margin-bottom: 0.5rem;
+      font-size: 1.2rem;
+      color: #ffd700;
     }
 
     iframe {
       width: 100%;
-      height: 400px;
+      height: 300px;
       border: none;
-      border-radius: 10px;
+      border-radius: 6px;
     }
 
     footer {
-      font-size: 0.9rem;
       text-align: center;
-      background: rgba(0, 0, 0, 0.8);
+      padding: 1rem;
+      background: rgba(0,0,0,0.6);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 1.8rem; }
+      .buttons a {
+        display: block;
+        margin: 0.7rem auto;
+        width: 90%;
+      }
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>🚗 Эвакуатор Краснодар</h1>
-    <p>Застряли на трассе? Приезжаем даже ночью, без выходных</p>
-    <div class="contacts">
-      <a href="tel:+79180713711">📞 +7 918 071-37-11</a>
-      <a href="https://t.me/username" target="_blank">Telegram</a>
-      <a href="https://wa.me/79180713711" target="_blank">WhatsApp</a>
-    </div>
+    <h1>Эвакуатор в Краснодаре</h1>
+    <p>Работаем 24/7. Надёжно. Без посредников.</p>
   </header>
+
+  <div class="buttons">
+    <a class="call" href="tel:+79180713711">📞 Позвонить</a>
+    <a class="whatsapp" href="https://wa.me/79180713711?text=Здравствуйте!%20Нужен%20эвакуатор" target="_blank">💬 WhatsApp</a>
+    <a class="telegram" href="https://t.me/+79180713711" target="_blank">✈️ Telegram</a>
+    <p class="phone-number">📱 <strong>+7 918 071‑37‑11</strong></p>
+  </div>
+
+  <section>
+    <h2>Наши услуги</h2>
+    <div class="services">
+      <div class="card">
+        <h3>🚗 Легковые и внедорожники</h3>
+        <p>Эвакуация любых легковых автомобилей и кроссоверов</p>
+      </div>
+      <div class="card">
+        <h3>🛠️ После ДТП</h3>
+        <p>Вывоз авто после аварии, бережная загрузка и сопровождение</p>
+      </div>
+      <div class="card">
+        <h3>🌄 За город</h3>
+        <p>Работаем по всему Краснодарскому краю, быстро доедем</p>
+      </div>
+      <div class="card">
+        <h3>🔧 Не заводится</h3>
+        <p>Застряли на трассе? Приезжаем даже ночью, без выходных</p>
+      </div>
+    </div>
+  </section>
 
   <section>
     <h2>Цены</h2>
-    <div class="price-cards">
+    <div class="prices">
       <div class="card">
         <h3>📍 По городу</h3>
         <p>От 1500 ₽. Без скрытых платежей.</p>
       </div>
       <div class="card">
-        <h3>🟨 За город</h3>
+        <h3>🛣️ За город</h3>
         <p>От 50 ₽/км. Расчёт сразу по телефону.</p>
       </div>
       <div class="card">
@@ -113,11 +180,11 @@
 
   <section>
     <h2>Работаем по Краснодару</h2>
-    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Afad0f3b67c8b567017ad63cb6807f9f4ceea72be6b4cc32ea7ad874d90ae1998&amp;source=constructor" frameborder="0"></iframe>
+    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A28f2787d29cf3a0f8e3f5be36de3a7b26e77a4d00d1a4cf24c45ff490c8a0c6f&amp;source=constructor"></iframe>
   </section>
 
   <footer>
-    © 2025 ИП Иванов Иван Петрович | +7 918 071-37-11 | Краснодар | Работаем 24/7
+    © 2025 ИП Иванов Иван Петрович | +7 918 071‑37‑11 | Краснодар | Работаем 24/7
   </footer>
 </body>
 </html>
