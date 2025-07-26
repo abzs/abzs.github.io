@@ -10,7 +10,8 @@
       margin: 0;
       font-family: sans-serif;
       background: url("images/bg.png") center/cover no-repeat fixed;
-      color: #fff;
+      color: #111;
+      background-color: #f5f5f5;
     }
     header {
       padding: 1rem;
@@ -27,10 +28,12 @@
       font-size: 2.5rem;
       font-weight: bold;
       margin-bottom: 0.5rem;
+      color: #000;
     }
     .hero p {
       font-size: 1.1rem;
       margin-bottom: 1rem;
+      color: #333;
     }
     .hero-buttons {
       display: flex;
@@ -51,10 +54,10 @@
     .whatsapp { background: #25d366; }
     .telegram { background: #0088cc; }
 
-    .contact-below-buttons {
-      font-size: 1.2rem;
+    .phone-number {
       margin-top: 0.5rem;
-      color: #f0f0f0;
+      color: #111;
+      font-weight: bold;
     }
 
     .section {
@@ -62,14 +65,15 @@
       margin: 1rem auto;
       padding: 1.5rem;
       border-radius: 12px;
-      background: rgba(0, 0, 0, 0.5);
+      background: #fff;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     }
     .section h2 {
       margin-bottom: 0.5rem;
-      color: #fff;
+      color: #222;
     }
     .divider {
-      border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+      border-bottom: 1px solid #ddd;
       margin-bottom: 1rem;
     }
     .cards {
@@ -79,11 +83,11 @@
     }
     .card {
       flex: 1 1 calc(33% - 1rem);
-      background: #fff;
+      background: #f9f9f9;
       color: #111;
       padding: 1rem;
       border-radius: 10px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
       transition: transform 0.2s ease;
     }
     .card:hover {
@@ -101,7 +105,7 @@
     footer {
       text-align: center;
       font-size: 0.9rem;
-      color: #aaa;
+      color: #555;
       padding: 1rem;
     }
     @media (max-width: 768px) {
@@ -112,18 +116,16 @@
   </style>
 </head>
 <body>
-  <header></header>
-
   <div class="hero">
     <h1>Эвакуатор в Краснодаре</h1>
     <p>Работаем 24/7. Надёжно. Без посредников.</p>
     <div class="hero-buttons">
-      <a href="tel:89189365757" class="call"><i class="fas fa-phone"></i> Позвонить</a>
+      <a href="tel:+79180713711" class="call"><i class="fas fa-phone"></i> Позвонить</a>
       <a href="https://wa.me/79180713711" class="whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
       <a href="https://t.me/username" class="telegram"><i class="fab fa-telegram-plane"></i> Telegram</a>
     </div>
-    <div class="contact-below-buttons">
-      📞 <a href="tel:89189365757" style="color: #f0f0f0; text-decoration: none">+7 918 936-57-57</a>
+    <div class="phone-number">
+      📞 <a href="tel:+79180713711" style="color: #111; text-decoration: none">+7 918 071-37-11</a>
     </div>
   </div>
 
