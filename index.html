@@ -1,96 +1,163 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Эвакуатор Краснодар 24/7</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
     body {
-      font-family: sans-serif;
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
       background: #fff;
       color: #111;
-      margin: 0;
-      padding: 0;
     }
     header {
-      background: #f5f5f5;
-      padding: 2rem;
+      background: url('https://images.unsplash.com/photo-1624312923864-265d63bbeb77?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80') center/cover no-repeat;
+      color: white;
+      text-shadow: 1px 1px 5px black;
+      padding: 3rem 1rem;
       text-align: center;
     }
     header h1 {
-      font-size: 2em;
-      margin-bottom: 0.5em;
+      font-size: 2.5rem;
+      margin: 0 0 1rem;
     }
+    header p {
+      font-size: 1.2rem;
+    }
+
     .buttons {
-      margin: 1em 0;
+      margin: 2rem auto;
+      text-align: center;
     }
     .buttons a {
       display: inline-block;
-      background: #007BFF;
-      color: #fff;
-      padding: 0.7em 1.2em;
+      margin: 0.5rem;
+      padding: 0.8rem 1.5rem;
       text-decoration: none;
-      margin: 0.5em;
-      border-radius: 5px;
       font-weight: bold;
+      color: white;
+      border-radius: 8px;
+      transition: 0.2s;
     }
-    .buttons a.whatsapp {
-      background: #25D366;
+    .call    { background: #333; }
+    .whatsapp { background: #25D366; }
+    .telegram { background: #0088cc; }
+    .buttons a:hover {
+      opacity: 0.85;
     }
-    .buttons a.telegram {
-      background: #0088cc;
+
+    section {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem 1rem;
     }
-    .section {
-      padding: 2rem;
-      max-width: 800px;
-      margin: 0 auto;
-    }
-    .section h2 {
+    h2 {
       margin-top: 0;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 0.5rem;
+      color: #222;
     }
+    .services, .prices {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1rem;
+    }
+    .card {
+      background: #f8f8f8;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+    .card h3 {
+      margin: 0 0 0.5rem;
+    }
+
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: none;
+      border-radius: 8px;
+    }
+
     footer {
-      background: #f5f5f5;
+      background: #f1f1f1;
       text-align: center;
       padding: 1rem;
-      font-size: 0.9em;
-      color: #444;
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
     }
   </style>
 </head>
 <body>
 
 <header>
-  <h1>Эвакуатор в Краснодаре 24/7</h1>
-  <p>Быстрый и надёжный выезд по городу и краю</p>
-  <div class="buttons">
-    <a href="tel:+79180713711">📞 Позвонить</a>
-    <a href="https://wa.me/79180713711" class="whatsapp" target="_blank">💬 WhatsApp</a>
-    <a href="https://t.me/+79180713711" class="telegram" target="_blank">✈️ Telegram</a>
-  </div>
+  <h1>Эвакуатор в Краснодаре</h1>
+  <p>Работаем 24/7. Надёжно. Без посредников.</p>
 </header>
 
-<section class="section">
+<div class="buttons">
+  <a class="call" href="tel:+79180713711">📞 Позвонить</a>
+  <a class="whatsapp" href="https://wa.me/79180713711?text=Здравствуйте!%20Нужен%20эвакуатор" target="_blank">💬 WhatsApp</a>
+  <a class="telegram" href="https://t.me/+79180713711" target="_blank">✈️ Telegram</a>
+</div>
+
+<section>
   <h2>Наши услуги</h2>
-  <ul>
-    <li>Эвакуация легковых и внедорожников</li>
-    <li>Вывоз неисправных авто с места ДТП</li>
-    <li>Доставка авто на СТО или парковку</li>
-    <li>Помощь на трассе: застрял, не заводится и т.д.</li>
-  </ul>
+  <div class="services">
+    <div class="card">
+      <h3>🚗 Легковые и внедорожники</h3>
+      <p>Эвакуация любых легковых автомобилей и кроссоверов</p>
+    </div>
+    <div class="card">
+      <h3>🛠️ После ДТП</h3>
+      <p>Вывоз авто после аварии, бережная загрузка и сопровождение</p>
+    </div>
+    <div class="card">
+      <h3>🌄 За город</h3>
+      <p>Работаем по всему Краснодарскому краю, быстро доедем</p>
+    </div>
+    <div class="card">
+      <h3>🔧 Не заводится</h3>
+      <p>Застряли на трассе? Приезжаем даже ночью, без выходных</p>
+    </div>
+  </div>
 </section>
 
-<section class="section">
+<section>
   <h2>Цены</h2>
-  <ul>
-    <li>По Краснодару — от 1500 ₽</li>
-    <li>По краю — от 50 ₽/км</li>
-    <li>Ожидание — 10 мин бесплатно, далее от 300 ₽/час</li>
-    <li>Без скрытых доплат. Всё честно.</li>
-  </ul>
+  <div class="prices">
+    <div class="card">
+      <h3>📍 По городу</h3>
+      <p>От 1500 ₽. Без скрытых платежей.</p>
+    </div>
+    <div class="card">
+      <h3>🛣️ За город</h3>
+      <p>От 50 ₽/км. Расчёт сразу по телефону.</p>
+    </div>
+    <div class="card">
+      <h3>🕐 Ожидание</h3>
+      <p>10 мин — бесплатно, далее от 300 ₽/час</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Работаем по Краснодару</h2>
+  <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A28f2787d29cf3a0f8e3f5be36de3a7b26e77a4d00d1a4cf24c45ff490c8a0c6f&amp;source=constructor"></iframe>
 </section>
 
 <footer>
-  © 2025 ИП Иванов Иван Петрович | Тел: +7 918 071‑37‑11 | Работаем 24/7
+  © 2025 ИП Иванов Иван Петрович | +7 918 071‑37‑11 | Краснодар | Работаем 24/7
 </footer>
 
 </body>
