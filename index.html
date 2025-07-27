@@ -14,11 +14,28 @@
     }
 
     .hero {
-      background: linear-gradient(to bottom, #0a3557 0%, #4db8e6 45%, #12427c 100%);
+      background: linear-gradient(to bottom, #0a3557 0%, #4db8e6 45%, #4db8e6 60%);
       color: white;
       text-align: center;
-      padding: 4rem 1rem 3rem;
+      padding: 4rem 1rem 0;
       position: relative;
+    }
+
+    .ground {
+      background: #12427c; /* пол */
+      height: 180px;
+      position: relative;
+    }
+
+    .towtruck {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      max-width: 650px;
+      width: 90%;
+      height: auto;
+      z-index: 2;
     }
 
     .hero h1 {
@@ -64,15 +81,6 @@
     .phone-number {
       margin-top: 0.5rem;
       font-size: 1.1rem;
-    }
-
-    .hero img {
-      max-width: 500px;
-      width: 90%;
-      height: auto;
-      margin-top: 2rem;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
     }
 
     .section {
@@ -139,7 +147,7 @@
         font-size: 2rem;
       }
 
-      .hero img {
+      .towtruck {
         max-width: 100%;
       }
     }
@@ -158,7 +166,10 @@
     <div class="phone-number">
       <i class="fas fa-phone-volume" style="color:#c62828;"></i> +7 918 936-57-57
     </div>
-    <img src="towtruck.png" alt="Эвакуатор" />
+  </div>
+
+  <div class="ground">
+    <img src="header-bg-towtruck.png" alt="Эвакуатор" class="towtruck" />
   </div>
 
   <section class="section">
