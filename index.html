@@ -2,109 +2,97 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Эвакуатор Краснодар</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Эвакуатор в Краснодаре</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
   <style>
+    * {
+      box-sizing: border-box;
+    }
     body {
       margin: 0;
-      font-family: sans-serif;
-      background: url("images/bg.png") center/cover no-repeat fixed;
-      color: #111;
-      background-color: #f5f5f5;
-    }
-    header {
-      padding: 1rem;
-      text-align: center;
+      font-family: "Segoe UI", sans-serif;
+      background-color: #f4f4f4;
+      color: #222;
     }
     .hero {
+      background: linear-gradient(to bottom, #004f88, #1976d2);
+      color: white;
       text-align: center;
-      padding: 2rem 1rem 1rem;
-      position: relative;
-    }
-    .hero::before {
-      content: "";
-      position: absolute;
-      top: -80px; /* Поднимаем выше */
-      left: 0;
-      right: 0;
-      height: 380px; /* Увеличиваем высоту */
-      background: url("images/header-bg-towtruck.png") center no-repeat;
-      background-size: contain;
-      opacity: 0.9;
-      z-index: -1;
+      padding: 3rem 1rem 2rem;
     }
     .hero h1 {
       font-size: 2.5rem;
-      font-weight: bold;
+      font-weight: 900;
       margin-bottom: 0.5rem;
-      color: #fff;
-      text-shadow: 1px 1px 2px #000;
     }
     .hero p {
-      font-size: 1.1rem;
-      margin-bottom: 1rem;
-      color: #000;
-      font-weight: bold;
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+      font-weight: 500;
+      color: #ffeb3b;
     }
     .hero-buttons {
       display: flex;
       justify-content: center;
-      gap: 1rem;
       flex-wrap: wrap;
-      margin-bottom: 0.5rem;
+      gap: 1rem;
+      margin-bottom: 1rem;
     }
     .hero-buttons a {
-      display: inline-block;
       padding: 0.6rem 1.2rem;
       border-radius: 8px;
+      font-weight: 600;
       text-decoration: none;
-      font-weight: bold;
-      color: #fff;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: white;
     }
-    .call { background: #1e1e1e; }
-    .whatsapp { background: #25d366; }
-    .telegram { background: #0088cc; }
-    .phone-number {
-      margin-top: 0.5rem;
-      color: #111;
+    .call { background-color: #263238; }
+    .whatsapp { background-color: #25d366; }
+    .telegram { background-color: #0088cc; }
+    .phone {
+      font-size: 1.1rem;
       font-weight: bold;
+      color: white;
     }
+
+    .hero-img {
+      max-width: 400px;
+      width: 100%;
+      margin: 2rem auto 0;
+    }
+
     .section {
+      background: white;
+      margin: 2rem auto;
+      padding: 2rem 1rem;
       max-width: 900px;
-      margin: 1rem auto;
-      padding: 1.5rem;
       border-radius: 12px;
-      background: #f0f0f0;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     }
     .section h2 {
-      margin-bottom: 0.5rem;
-      color: #222;
-    }
-    .divider {
-      border-bottom: 1px solid #ccc;
+      text-align: center;
       margin-bottom: 1rem;
+      color: #1976d2;
     }
     .cards {
       display: flex;
       flex-wrap: wrap;
       gap: 1rem;
+      justify-content: center;
     }
     .card {
-      flex: 1 1 calc(33% - 1rem);
-      background: #ffffff;
-      color: #111;
+      flex: 1 1 250px;
+      background: #f9f9f9;
       padding: 1rem;
       border-radius: 10px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
-      transition: transform 0.2s ease;
-    }
-    .card:hover {
-      transform: translateY(-2px);
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
     }
     .card i {
       margin-right: 0.5rem;
+      color: #1976d2;
     }
     iframe {
       width: 100%;
@@ -115,37 +103,36 @@
     footer {
       text-align: center;
       font-size: 0.9rem;
-      color: #555;
-      padding: 1rem;
+      color: #666;
+      margin: 2rem 0;
     }
+
     @media (max-width: 768px) {
-      .card {
-        flex: 1 1 100%;
-      }
-      .hero::before {
-        height: 220px;
-        top: -50px;
-      }
+      .card { flex: 1 1 100%; }
     }
   </style>
 </head>
 <body>
+
   <div class="hero">
-    <h1>Эвакуатор в Краснодаре</h1>
+    <h1>ЭВАКУАТОР В КРАСНОДАРЕ</h1>
     <p>Работаем 24/7. Надёжно. Без посредников.</p>
+
     <div class="hero-buttons">
       <a href="tel:+79189365757" class="call"><i class="fas fa-phone"></i> Позвонить</a>
       <a href="https://wa.me/79189365757" class="whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
       <a href="https://t.me/username" class="telegram"><i class="fab fa-telegram-plane"></i> Telegram</a>
     </div>
-    <div class="phone-number">
-      📞 <a href="tel:+79189365757" style="color: #111; text-decoration: none">+7 918 936-57-57</a>
+
+    <div class="phone">
+      <i class="fas fa-phone-alt"></i> +7 918 936-57-57
     </div>
+
+    <img src="images/towtruck-banner.png" alt="Эвакуатор" class="hero-img" />
   </div>
 
   <section class="section">
     <h2>Наши услуги</h2>
-    <div class="divider"></div>
     <div class="cards">
       <div class="card">
         <i class="fas fa-car"></i><strong> Легковые и внедорожники</strong>
@@ -168,31 +155,30 @@
 
   <section class="section">
     <h2>Цены</h2>
-    <div class="divider"></div>
     <div class="cards">
       <div class="card">
-        <i class="fas fa-key"></i><strong> По городу</strong>
-        <p>От 1500 ₽. Без скрытых платежей.</p>
+        <i class="fas fa-city"></i><strong> По городу</strong>
+        <p>От 1500 Р. Без скрытых платежей.</p>
       </div>
       <div class="card">
-        <i class="fas fa-flag"></i><strong> За город</strong>
-        <p>От 50 ₽/км. Расчёт сразу по телефону.</p>
+        <i class="fas fa-route"></i><strong> За город</strong>
+        <p>От 50 Р/км. Расчёт сразу по телефону.</p>
       </div>
       <div class="card">
-        <i class="fas fa-clock"></i><strong> Ожидание</strong>
-        <p>10 мин — бесплатно, далее от 300 ₽/час</p>
+        <i class="fas fa-hourglass-start"></i><strong> Ожидание</strong>
+        <p>10 мин — бесплатно, далее от 300 Р/час</p>
       </div>
     </div>
   </section>
 
   <section class="section">
     <h2>Работаем по Краснодару</h2>
-    <div class="divider"></div>
     <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A2f21c81b0109a3b1639944738e8a76f334e21c9e6825f41011fc2b761e589db5&amp;source=constructor" allowfullscreen></iframe>
   </section>
 
   <footer>
     © 2025 +7 918 936-57-57 | Краснодар | Работаем 24/7
   </footer>
+
 </body>
 </html>
