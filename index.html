@@ -17,7 +17,7 @@
       position: relative;
       text-align: center;
       padding-top: 60px;
-      padding-bottom: 180px;
+      padding-bottom: 320px; /* увеличено, чтобы освободить место под эвакуатор и дорогу */
     }
 
     .header-content {
@@ -70,7 +70,7 @@
 
     .towtruck {
       position: absolute;
-      bottom: -80px;
+      bottom: -120px; /* ниже чем раньше */
       left: 50%;
       transform: translateX(-50%);
       width: 680px;
@@ -84,7 +84,7 @@
       height: 80px;
       width: 100%;
       position: relative;
-      top: -80px;
+      top: -120px; /* чтобы идти строго под эвакуатором */
       z-index: 0;
     }
 
@@ -154,7 +154,7 @@
     @media (max-width: 600px) {
       h1 { font-size: 2rem; }
       .phone { font-size: 1.1rem; }
-      .header { padding-top: 40px; padding-bottom: 120px; }
+      .header { padding-top: 40px; padding-bottom: 300px; }
     }
   </style>
 </head>
@@ -172,7 +172,7 @@
       </div>
       <div class="phone">📱 +7 918 936-57-57</div>
     </div>
-    <img src="images/header-bg-towtruck.png?v=6" alt="Эвакуатор" class="towtruck" />
+    <img src="images/header-bg-towtruck.png?v=7" alt="Эвакуатор" class="towtruck" />
   </div>
 
   <!-- Дорога -->
