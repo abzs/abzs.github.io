@@ -3,184 +3,130 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Эвакуатор Краснодар</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-papmQeKMvuUNf1d5N8UfR0GuqWlRZzWQh44z42Y7JswznUpn4r7hK+3+CHrJmSGeU9NmrMZ+7oMgFVmO+v8cug==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Эвакуатор в Краснодаре</title>
+  
   <style>
     body {
       margin: 0;
-      font-family: sans-serif;
-      background: url("images/bg.png") center/cover no-repeat fixed;
-      color: #111;
+      font-family: system-ui, sans-serif;
       background-color: #f5f5f5;
-    }
-    header {
-      padding: 1rem;
-      text-align: center;
-    }
-    .contact {
-      font-size: 1.2rem;
-    }
-    .hero {
-      text-align: center;
-      padding: 2rem 1rem 1rem;
-    }
-    .hero h1 {
-      font-size: 2.5rem;
-      font-weight: bold;
-      margin-bottom: 0.5rem;
-      color: #fff;
-      text-shadow: 1px 1px 2px #000;
-    }
-    .hero p {
-      font-size: 1.1rem;
-      margin-bottom: 1rem;
-      color: #000;
-      font-weight: bold;
-    }
-    .hero-buttons {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      flex-wrap: wrap;
-      margin-bottom: 0.5rem;
-    }
-    .hero-buttons a {
-      display: inline-block;
-      padding: 0.6rem 1.2rem;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      color: #fff;
-    }
-    .call { background: #1e1e1e; }
-    .whatsapp { background: #25d366; }
-    .telegram { background: #0088cc; }
-
-    .phone-number {
-      margin-top: 0.5rem;
-      color: #111;
-      font-weight: bold;
-    }
-
-    .section {
-      max-width: 900px;
-      margin: 1rem auto;
-      padding: 1.5rem;
-      border-radius: 12px;
-      background: #f0f0f0;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    }
-    .section h2 {
-      margin-bottom: 0.5rem;
       color: #222;
     }
-    .divider {
-      border-bottom: 1px solid #ccc;
-      margin-bottom: 1rem;
-    }
-    .cards {
+
+    /* Шапка */
+    .site-header {
+      position: relative;
+      background: url("img/header-bg-towtruck.png") no-repeat center bottom;
+      background-size: cover;
+      min-height: 320px;
       display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
-    .card {
-      flex: 1 1 calc(33% - 1rem);
-      background: #ffffff;
-      color: #111;
-      padding: 1rem;
-      border-radius: 10px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
-      transition: transform 0.2s ease;
-    }
-    .card:hover {
-      transform: translateY(-2px);
-    }
-    .card i {
-      margin-right: 0.5rem;
-    }
-    iframe {
-      width: 100%;
-      height: 300px;
-      border: none;
-      border-radius: 10px;
-    }
-    footer {
+      align-items: center;
+      justify-content: center;
       text-align: center;
-      font-size: 0.9rem;
-      color: #555;
-      padding: 1rem;
     }
-    @media (max-width: 768px) {
-      .card {
-        flex: 1 1 100%;
-      }
+
+    .header-overlay {
+      background-color: rgba(255, 255, 255, 0.85);
+      padding: 30px;
+      border-radius: 16px;
+      max-width: 800px;
+      margin: 20px;
+    }
+
+    h1 {
+      font-size: 2em;
+      margin-bottom: 0.3em;
+    }
+
+    .buttons {
+      margin: 1em 0;
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 0.6em 1.2em;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      color: white;
+    }
+
+    .btn.black { background-color: #222; }
+    .btn.green { background-color: #25D366; }
+    .btn.blue { background-color: #0088cc; }
+
+    .phone {
+      margin-top: 0.5em;
+      font-size: 1.1em;
+    }
+
+    /* Контент */
+    .content {
+      max-width: 960px;
+      margin: 2em auto;
+      padding: 0 1em;
+    }
+
+    h2 {
+      font-size: 1.6em;
+      margin-bottom: 1em;
+    }
+
+    .grid {
+      display: grid;
+      gap: 1em;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .card {
+      background: white;
+      padding: 1em;
+      border-radius: 12px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.05);
+      font-size: 0.95em;
     }
   </style>
 </head>
 <body>
-  <div class="hero">
-    <h1>Эвакуатор в Краснодаре</h1>
-    <p>Работаем 24/7. Надёжно. Без посредников.</p>
-    <div class="hero-buttons">
-      <a href="tel:+79189365757" class="call"><i class="fas fa-phone"></i> Позвонить</a>
-      <a href="https://wa.me/79189365757" class="whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-      <a href="https://t.me/username" class="telegram"><i class="fab fa-telegram-plane"></i> Telegram</a>
-    </div>
-    <div class="phone-number">
-      📞 <a href="tel:+79189365757" style="color: #111; text-decoration: none">+7 918 936-57-57</a>
-    </div>
-  </div>
 
-  <section class="section">
-    <h2>Наши услуги</h2>
-    <div class="divider"></div>
-    <div class="cards">
-      <div class="card">
-        <i class="fas fa-car"></i><strong> Легковые и внедорожники</strong>
-        <p>Эвакуация любых легковых автомобилей и кроссоверов</p>
+  <!-- Шапка -->
+  <header class="site-header">
+    <div class="header-overlay">
+      <h1>Эвакуатор в Краснодаре</h1>
+      <p>Работаем 24/7. Надёжно. Без посредников.</p>
+      <div class="buttons">
+        <a class="btn black" href="tel:+79189365757">Позвонить</a>
+        <a class="btn green" href="https://wa.me/79189365757">WhatsApp</a>
+        <a class="btn blue" href="https://t.me/username">Telegram</a>
       </div>
-      <div class="card">
-        <i class="fas fa-car-crash"></i><strong> После ДТП</strong>
-        <p>Вывоз авто после аварии, бережная загрузка и сопровождение</p>
-      </div>
-      <div class="card">
-        <i class="fas fa-map-marker-alt"></i><strong> За город</strong>
-        <p>Работаем по всему Краснодарскому краю, быстро доедем</p>
-      </div>
-      <div class="card">
-        <i class="fas fa-wrench"></i><strong> Не заводится</strong>
-        <p>Застряли на трассе? Приезжаем даже ночью, без выходных</p>
-      </div>
+      <p class="phone">📞 +7 918 936-57-57</p>
     </div>
-  </section>
+  </header>
 
-  <section class="section">
-    <h2>Цены</h2>
-    <div class="divider"></div>
-    <div class="cards">
-      <div class="card">
-        <i class="fas fa-key"></i><strong> По городу</strong>
-        <p>От 1500 Р. Без скрытых платежей.</p>
+  <!-- Контент -->
+  <main class="content">
+    <section class="services">
+      <h2>Наши услуги</h2>
+      <div class="grid">
+        <div class="card"><strong>Легковые и внедорожники</strong><br>Эвакуация любых легковых автомобилей и кроссоверов</div>
+        <div class="card"><strong>После ДТП</strong><br>Вывоз авто после аварии, бережная загрузка и сопровождение</div>
+        <div class="card"><strong>За город</strong><br>Работаем по всему Краснодарскому краю, быстро доедем</div>
+        <div class="card"><strong>Не заводится</strong><br>Застряли на трассе? Приезжаем даже ночью, без выходных</div>
       </div>
-      <div class="card">
-        <i class="fas fa-flag"></i><strong> За город</strong>
-        <p>От 50 Р/км. Расчёт сразу по телефону.</p>
-      </div>
-      <div class="card">
-        <i class="fas fa-clock"></i><strong> Ожидание</strong>
-        <p>10 мин — бесплатно, далее от 300 Р/час</p>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="section">
-    <h2>Работаем по Краснодару</h2>
-    <div class="divider"></div>
-    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A2f21c81b0109a3b1639944738e8a76f334e21c9e6825f41011fc2b761e589db5&amp;source=constructor" allowfullscreen></iframe>
-  </section>
+    <section class="pricing">
+      <h2>Цены</h2>
+      <div class="grid">
+        <div class="card"><strong>По городу</strong><br>От 1500 ₽. Без скрытых платежей.</div>
+        <div class="card"><strong>За город</strong><br>От 50 ₽/км. Расчёт сразу по телефону.</div>
+        <div class="card"><strong>Ожидание</strong><br>10 мин — бесплатно, далее от 300 ₽/час</div>
+      </div>
+    </section>
+  </main>
 
-  <footer>
-    © 2025 +7 918 936-57-57 | Краснодар | Работаем 24/7
-  </footer>
 </body>
 </html>
