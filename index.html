@@ -25,10 +25,10 @@
     .hero::before {
       content: "";
       position: absolute;
-      top: 0;
+      top: -80px; /* Поднимаем выше */
       left: 0;
       right: 0;
-      height: 250px;
+      height: 380px; /* Увеличиваем высоту */
       background: url("images/header-bg-towtruck.png") center no-repeat;
       background-size: contain;
       opacity: 0.9;
@@ -123,7 +123,8 @@
         flex: 1 1 100%;
       }
       .hero::before {
-        height: 180px;
+        height: 220px;
+        top: -50px;
       }
     }
   </style>
