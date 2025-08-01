@@ -110,15 +110,16 @@ h1 {
 
 .towtruck {
   position: absolute;
-  bottom: -5%;
   left: 50%;
+  bottom: -5%; /* подстрой по высоте дороги */
   transform: translateX(-50%);
-  height: 34%;
-  width: auto;
-  max-width: 700px;
+  height: 38%;            /* адаптивная высота от .visual-group */
+  width: auto;            /* автоширина — сохраняет пропорции */
+  max-height: 680px;      /* ограничение на больших экранах */
   z-index: 3;
   pointer-events: none;
 }
+
 
 
 
@@ -228,11 +229,12 @@ footer {
       <div class="phone">📱 +7 918 936-57-57</div>
     </div>
 
-    <div class="visual-group">
-      <img src="images/cityline-header-bg.png" alt="Город" class="cityline" />
-      <div class="road_line"></div>
-      <img src="images/header-bg-towtruck.png" class="towtruck" alt="Эвакуатор" />
-    </div>
+<div class="visual-group">
+  <img src="images/cityline-header-bg.png" alt="Город" class="cityline" />
+  <img src="images/header-bg-towtruck.png" alt="Эвакуатор" class="towtruck" />
+  <div class="road_line"></div>
+</div>
+
   </div>
 
   <div class="road"></div>
