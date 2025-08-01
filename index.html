@@ -23,7 +23,10 @@ html, body {
   position: relative;
   z-index: 5;
   width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 2rem 1rem 1rem;
+  text-align: center;
 }
 
 h1 {
@@ -108,7 +111,8 @@ h1 {
   height: 34%;
   z-index: 3;
   pointer-events: none;
-  transition: top 0.3s ease;
+  transition: top 0.3s ease, opacity 0.3s ease;
+  opacity: 0;
 }
 
 /* Остальной сайт */
@@ -274,6 +278,7 @@ footer {
       const newTop = citylineTop + citylineHeight - (towtruck.offsetHeight * 0.85);
 
       towtruck.style.top = `${newTop}px`;
+	  towtruck.style.opacity = '1';
     }
 
     window.addEventListener('load', updateTowtruckPosition);
