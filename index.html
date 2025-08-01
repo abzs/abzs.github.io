@@ -10,25 +10,17 @@ html, body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  background: linear-gradient(to bottom,
-    #0b3b61 0%,
-    #43b0e0 35%,
-    #58c1ec 55%,
-    #0b3b61 70%
-  );
+  background: linear-gradient(to bottom, #0b3b61 0%, #43b0e0 35%, #58c1ec 55%, #0b3b61 70%);
   color: #fff;
   overflow-x: hidden;
 }
 
 .header {
   text-align: center;
-  padding-top: 0%;
-  padding-bottom: 0%;
 }
 
 .header-content {
   position: relative;
-  text-align: center;
   z-index: 5;
   width: 100%;
   padding: 2rem 1rem 1rem;
@@ -73,7 +65,6 @@ h1 {
 
 .phone {
   font-size: 1.3rem;
-  color: #fff;
   font-weight: bold;
 }
 
@@ -84,11 +75,6 @@ h1 {
   max-width: 2200px;
   margin: 0 auto;
   z-index: 1;
-}
-
-.cityline-wrapper {
-  position: relative;
-  width: 100%;
 }
 
 .cityline {
@@ -115,17 +101,17 @@ h1 {
 
 .towtruck {
   position: absolute;
-  bottom: -5%;               /* теперь — от нижнего края cityline */
   left: 50%;
   transform: translateX(-50%);
-  height: 38%;               /* от размера обёртки cityline */
   width: auto;
   max-height: 680px;
+  height: 34%;
   z-index: 3;
   pointer-events: none;
+  transition: top 0.3s ease;
 }
-/* ====== Остальной сайт ======= */
 
+/* Остальной сайт */
 .road {
   background-color: #0f548d;
   height: 120px;
@@ -213,7 +199,6 @@ footer {
 @media (max-width: 600px) {
   h1 { font-size: 2rem; }
   .phone { font-size: 1.1rem; }
-  .towtruck { width: 80vw; bottom: 12%; }
 }
   </style>
 </head>
@@ -230,15 +215,12 @@ footer {
       <div class="phone">📱 +7 918 936-57-57</div>
     </div>
 
-<div class="visual-group">
-  <div class="cityline-wrapper">
-    <img src="images/cityline-header-bg.png" alt="Город" class="cityline" />
-    <img src="images/header-bg-towtruck.png?v=7" alt="Эвакуатор" class="towtruck" />
-  </div>
-  <div class="road_line"></div>
-</div>
-
-
+    <!-- Визуальная сцена -->
+    <div class="visual-group">
+      <img src="images/cityline-header-bg.png" alt="Город" class="cityline" />
+      <img src="images/header-bg-towtruck.png?v=7" alt="Эвакуатор" class="towtruck" />
+      <div class="road_line"></div>
+    </div>
   </div>
 
   <div class="road"></div>
@@ -247,40 +229,19 @@ footer {
     <div class="section">
       <div class="section-title">Наши услуги</div>
       <div class="grid">
-        <div class="card">
-          <h3>🚗 Легковые и внедорожники</h3>
-          <p>Эвакуация любых легковых автомобилей и кроссоверов</p>
-        </div>
-        <div class="card">
-          <h3>🚧 После ДТП</h3>
-          <p>Вывоз авто после аварии, бережная загрузка и сопровождение</p>
-        </div>
-        <div class="card">
-          <h3>🗺️ За город</h3>
-          <p>Работаем по всему Краснодарскому краю, быстро доедем</p>
-        </div>
-        <div class="card">
-          <h3>🔋 Не заводится</h3>
-          <p>Застряли на трассе? Приезжаем даже ночью, без выходных</p>
-        </div>
+        <div class="card"><h3>🚗 Легковые и внедорожники</h3><p>Эвакуация любых легковых автомобилей и кроссоверов</p></div>
+        <div class="card"><h3>🚧 После ДТП</h3><p>Вывоз авто после аварии, бережная загрузка и сопровождение</p></div>
+        <div class="card"><h3>🗺️ За город</h3><p>Работаем по всему Краснодарскому краю, быстро доедем</p></div>
+        <div class="card"><h3>🔋 Не заводится</h3><p>Застряли на трассе? Приезжаем даже ночью, без выходных</p></div>
       </div>
     </div>
 
     <div class="section">
       <div class="section-title">Цены</div>
       <div class="grid">
-        <div class="card">
-          <h3>🏙️ По городу</h3>
-          <p>От 1500 ₽. Без скрытых платежей.</p>
-        </div>
-        <div class="card">
-          <h3>🛣️ За город</h3>
-          <p>От 50 ₽/км. Расчёт сразу по телефону.</p>
-        </div>
-        <div class="card">
-          <h3>⏳ Ожидание</h3>
-          <p>10 мин — бесплатно, далее от 300 ₽/час</p>
-        </div>
+        <div class="card"><h3>🏙️ По городу</h3><p>От 1500 ₽. Без скрытых платежей.</p></div>
+        <div class="card"><h3>🛣️ За город</h3><p>От 50 ₽/км. Расчёт сразу по телефону.</p></div>
+        <div class="card"><h3>⏳ Ожидание</h3><p>10 мин — бесплатно, далее от 300 ₽/час</p></div>
       </div>
     </div>
 
@@ -292,8 +253,31 @@ footer {
     </div>
   </div>
 
-  <footer>
-    © 2025 +7 918 936-57-57 | Краснодар | Работаем 24/7
-  </footer>
+  <footer>© 2025 +7 918 936-57-57 | Краснодар | Работаем 24/7</footer>
+
+  <script>
+    function updateTowtruckPosition() {
+      const cityline = document.querySelector('.cityline');
+      const towtruck = document.querySelector('.towtruck');
+
+      if (!cityline || !towtruck) return;
+
+      const citylineRect = cityline.getBoundingClientRect();
+      const citylineTop = cityline.offsetTop;
+      const citylineHeight = cityline.offsetHeight;
+
+      // Позиция эвакуатора — привязка к нижней части .cityline
+      const visualGroup = document.querySelector('.visual-group');
+      const visualTop = visualGroup.offsetTop;
+
+      // Смещение от верхнего края .visual-group
+      const newTop = citylineTop + citylineHeight - (towtruck.offsetHeight * 0.5);
+
+      towtruck.style.top = `${newTop}px`;
+    }
+
+    window.addEventListener('load', updateTowtruckPosition);
+    window.addEventListener('resize', updateTowtruckPosition);
+  </script>
 </body>
 </html>
