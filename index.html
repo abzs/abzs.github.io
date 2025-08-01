@@ -86,11 +86,16 @@ h1 {
   z-index: 1;
 }
 
+.cityline-wrapper {
+  position: relative;
+  width: 100%;
+}
+
 .cityline {
   display: block;
   width: 100%;
   height: auto;
-  margin-top: -42%; /* <-- подбирай значение по вкусу */
+  margin-top: -42%;
   z-index: 0;
   position: relative;
 }
@@ -110,19 +115,15 @@ h1 {
 
 .towtruck {
   position: absolute;
+  bottom: -5%;               /* теперь — от нижнего края cityline */
   left: 50%;
-  bottom: -5%; /* подстрой по высоте дороги */
   transform: translateX(-50%);
-  height: 38%;            /* адаптивная высота от .visual-group */
-  width: auto;            /* автоширина — сохраняет пропорции */
-  max-height: 680px;      /* ограничение на больших экранах */
+  height: 38%;               /* от размера обёртки cityline */
+  width: auto;
+  max-height: 680px;
   z-index: 3;
   pointer-events: none;
 }
-
-
-
-
 /* ====== Остальной сайт ======= */
 
 .road {
@@ -230,10 +231,13 @@ footer {
     </div>
 
 <div class="visual-group">
-  <img src="images/cityline-header-bg.png" alt="Город" class="cityline" />
-  <img src="images/header-bg-towtruck.png" alt="Эвакуатор" class="towtruck" />
+  <div class="cityline-wrapper">
+    <img src="images/cityline-header-bg.png" alt="Город" class="cityline" />
+    <img src="images/header-bg-towtruck.png?v=7" alt="Эвакуатор" class="towtruck" />
+  </div>
   <div class="road_line"></div>
 </div>
+
 
   </div>
 
